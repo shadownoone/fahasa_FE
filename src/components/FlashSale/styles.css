@@ -1,0 +1,92 @@
+.flashsale_header {
+    padding: 18px 24px;
+    margin: 0 0 16px 0;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.fhs_center_space {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flashsale-slider-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.margin_left_big {
+    margin-top: 2px;
+    color: black;
+    font-weight: 600;
+    font-size: 1.2em;
+    font-family: "Nunito Sans";
+    margin-left: 16px;
+}
+.margin_left_normal {
+    margin-left: 8px;
+}
+.flashsale-countdown > span {
+    color: #000;
+    font-size: 1em;
+    font-weight: bold;
+}
+.flashsale_header .flashsale-countdown-number,
+.flashsale-product-info .flashsale-countdown-number {
+    padding: 4px 6px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+.fhs_btn_default_text.blue {
+    color: #1478fc;
+}
+@media screen and (min-width: 992px) {
+    .desktop_only {
+        display: flex;
+    }
+}
+.flex-jus-text {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.icon {
+    width: 24px;
+    color: #1478fc;
+}
+.slider-container {
+    flex: 2;
+    margin-right: 20px;
+
+    position: relative;
+}
+.button {
+    display: none;
+}
+.fhs-product-slider-content .item-inner {
+    background: #fff;
+}

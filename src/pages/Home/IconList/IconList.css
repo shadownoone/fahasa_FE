@@ -1,0 +1,22 @@
+/* components/IconList.css */
+.home-icon {
+    width: 100%;
+}
+.icon-slider {
+    display: flex;
+    justify-content: space-around; /* Để các biểu tượng cách đều nhau */
+    align-items: center;
+    flex-wrap: wrap; /* Cho phép các biểu tượng xuống dòng nếu không đủ chỗ */
+}
+.icon_menu_container {
+    width: 115px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Để hình ảnh và chữ nằm ở giữa */
+    text-align: center; /* Để chữ nằm giữa */
+}
+.icon_menu_container img {
+    width: 40%;
+    margin-bottom: 8px; /* Thêm khoảng cách giữa hình ảnh và chữ */
+}

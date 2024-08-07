@@ -1,0 +1,67 @@
+.slider-onl {
+    width: 841px !important;
+}
+.slider-container {
+    flex: 2;
+    margin-right: 20px;
+    width: 841px;
+    position: relative; /* Vị trí tương đối để chứa các nút */
+}
+
+.slider-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.slider-container img,
+.slider-main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+.button {
+    border: none; /* Màu và độ dày của viền */
+    background-color: white; /* Màu nền */
+
+    text-align: center; /* Căn giữa nội dung */
+    display: flex; /* Sử dụng flex để căn giữa biểu tượng */
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Chiều rộng của hình tròn */
+    height: 40px; /* Chiều cao của hình tròn */
+    border-radius: 50%; /* Tạo hình tròn */
+    margin: 10px 2px; /* Khoảng cách ngoài */
+    transition: background-color 0.4s, color 0.4s, border 0.4s; /* Thay đổi màu nền, màu chữ và viền khi hover */
+    cursor: pointer; /* Thay đổi con trỏ */
+}
+
+.button:hover {
+    background-color: #007bff; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+    border: 2px solid #007bff; /* Đảm bảo viền khi hover */
+}
+
+.previous {
+    position: absolute; /* Vị trí tuyệt đối */
+    left: 0px; /* Cách trái 10px */
+    top: 50%; /* Cách trên 50% */
+    transform: translateY(-50%); /* Dịch chuyển theo trục Y */
+}
+
+.next {
+    position: absolute; /* Vị trí tuyệt đối */
+    right: 0px; /* Cách phải 10px */
+    top: 50%; /* Cách trên 50% */
+    transform: translateY(-50%); /* Dịch chuyển theo trục Y */
+}
+.icon {
+    width: 20px; /* Kích thước biểu tượng bên trong */
+    height: 20px; /* Kích thước biểu tượng bên trong */
+}
+.slick-prev:before,
+.slick-next:before {
+    color: #5f4c4c;
+}

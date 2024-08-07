@@ -1,0 +1,13 @@
+/* components/BannerList.css */
+.home-banner {
+    width: 100%;
+}
+.banner-list {
+    display: flex;
+}
+.banner-img {
+    margin-right: 8px;
+}
+.banner-img img {
+    width: 100%;
+}
