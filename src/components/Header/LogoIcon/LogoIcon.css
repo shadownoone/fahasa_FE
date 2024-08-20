@@ -1,0 +1,13 @@
+.logo {
+    width: 220px;
+    vertical-align: middle;
+}
+.fhs_mouse_point {
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}

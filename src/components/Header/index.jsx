@@ -1,27 +1,16 @@
 import { useState, useRef, useEffect } from "react";
-import {
-    GridIcon,
-    DownIcon,
-    BellIcon,
-    CartIcon,
-    UserIcon,
-    VNIcon,
-    GBIcon,
-    LanguageIcon,
-} from "../Icons/icons";
+import { GridIcon, DownIcon, LanguageIcon } from "../Icons/icons";
 import "./styles.css";
 import Search from "../Search";
+import HeaderTopBanner from "./HeaderTopBanner/HeaderTopBanner";
+import LogoIcon from "./LogoIcon/LogoIcon";
+import LanguageSection from "./LanguageSection/LanguageSection";
+import UserSection from "./UserSection/UserSection";
 
 function Header() {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isCategoryOpen, setIsCategoryOpen] = useState(false);
-    const [currentLanguage, setCurrentLanguage] = useState("VN");
-    const dropdownRef = useRef(null);
-    const categoryRef = useRef(null);
 
-    const handleToggle = () => {
-        setIsDropdownOpen((prev) => !prev);
-    };
+    const categoryRef = useRef(null);
 
     const handleMouseEnterCategory = () => {
         setIsCategoryOpen(true);
@@ -32,51 +21,24 @@ function Header() {
     };
 
     const handleClickOutside = (event) => {
-        if (
-            dropdownRef.current &&
-            !dropdownRef.current.contains(event.target)
-        ) {
-            setIsDropdownOpen(false);
-        }
-        if (
-            categoryRef.current &&
-            !categoryRef.current.contains(event.target)
-        ) {
+        if (categoryRef.current && !categoryRef.current.contains(event.target)) {
             setIsCategoryOpen(false);
         }
     };
 
-    const handleLanguageChange = (language) => {
-        setCurrentLanguage(language);
-        setIsDropdownOpen(false);
-    };
-
     useEffect(() => {
         document.addEventListener("mousedown", handleClickOutside);
-        return () =>
-            document.removeEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
     return (
         <div className="header">
-            <div className="header-top-banner">
-                <div className="top-banner-block">
-                    <a href="https://www.fahasa.com/vpp-plus">
-                        <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-07-2024/NCCPlus_T07_Header_1263x60.jpg" />
-                    </a>
-                </div>
-            </div>
+            <HeaderTopBanner />
+
             <div style={{ backgroundColor: "#fff" }}>
                 <div className="container">
-                    <div className="logo_icon">
-                        <div className="mouse_point">
-                            <img
-                                src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/fahasa-logo.png"
-                                alt="Logo"
-                                className="logo"
-                            />
-                        </div>
-                    </div>
+                    <LogoIcon />
+
                     <div className="header-items">
                         <div
                             className="menu-category"
@@ -91,43 +53,28 @@ function Header() {
                             </span>
                             {isCategoryOpen && (
                                 <div className="overlay">
-                                    <div
-                                        className="category-list"
-                                        ref={categoryRef}
-                                    >
+                                    <div className="category-list" ref={categoryRef}>
                                         <div className="category-notifi">
                                             <div className="category-title">
                                                 <h1>Product Category</h1>
                                                 <ul>
                                                     <li>
-                                                        <a href="/">
-                                                            Sách trong nước
-                                                        </a>
+                                                        <a href="/">Sách trong nước</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/">
-                                                            FOREIGN BOOKS
-                                                        </a>
+                                                        <a href="/">FOREIGN BOOKS</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/">
-                                                            VPP - Dụng Cụ Học
-                                                            Sinh
-                                                        </a>
+                                                        <a href="/">VPP - Dụng Cụ Học Sinh</a>
                                                     </li>
                                                     <li>
                                                         <a href="/">Đồ Chơi</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/">
-                                                            Làm Đẹp - Sức Khỏe
-                                                        </a>
+                                                        <a href="/">Làm Đẹp - Sức Khỏe</a>
                                                     </li>
                                                     <li>
-                                                        <a href="/">
-                                                            Hành Trang Đến
-                                                            Trường
-                                                        </a>
+                                                        <a href="/">Hành Trang Đến Trường</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -213,84 +160,9 @@ function Header() {
 
                         <Search />
 
-                        <div className="user-section">
-                            <a href="#" className="notification">
-                                <BellIcon style={{ width: 20, height: 20 }} />
-                                <span>Thông báo</span>
-                                <div className="notification-dropdown">
-                                    <div className="notification-item">
-                                        <img
-                                            src="https://i.pinimg.com/236x/e3/35/84/e33584737e528b95f30a4ba7129cf115.jpg"
-                                            className="notification-image"
-                                        />
-                                        <div className="notification-content">
-                                            <h4 className="notification-title">
-                                                Tiêu đề 1
-                                            </h4>
-                                            <p className="notification-note">
-                                                Ghi chú 1
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <div className="cart">
-                                <a href="#">
-                                    <CartIcon
-                                        style={{ width: 20, height: 20 }}
-                                    />
-                                    <span>Giỏ hàng</span>
-                                </a>
-                            </div>
-                            <div className="account">
-                                <UserIcon style={{ width: 20, height: 20 }} />
-                                <span>Tài khoản</span>
-                                <div className="account-dropdown">
-                                    <a href="#" className="login">
-                                        Đăng nhập
-                                    </a>
-                                    <a href="#" className="signup">
-                                        Đăng ký
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <UserSection />
                     </div>
-                    <div className="language-section">
-                        <button
-                            className="language-button"
-                            onClick={handleToggle}
-                        >
-                            {currentLanguage === "VN" ? (
-                                <VNIcon className="flag-icon" />
-                            ) : (
-                                <GBIcon className="flag-icon" />
-                            )}
-
-                            <DownIcon style={{ width: 16, height: 16 }} />
-                        </button>
-                        {isDropdownOpen && (
-                            <div className="language-options" ref={dropdownRef}>
-                                <a
-                                    href="#"
-                                    className="language-option"
-                                    onClick={() => handleLanguageChange("GB")}
-                                >
-                                    <GBIcon className="flag-icon" />
-                                    EN
-                                </a>
-                                <a
-                                    href="#"
-                                    className="language-option"
-                                    onClick={() => handleLanguageChange("VN")}
-                                >
-                                    <VNIcon className="flag-icon" />
-                                    VN
-                                </a>
-                            </div>
-                        )}
-                    </div>
+                    <LanguageSection />
                 </div>
             </div>
         </div>

@@ -1,18 +1,10 @@
 import "./styles.css";
-import { RightIcon, LeftIcon } from "../Icons/icons";
-import { useRef } from "react";
+
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 function FlashSale() {
-    let sliderRef = useRef(null);
-    const next = () => {
-        sliderRef.slickNext();
-    };
-    const previous = () => {
-        sliderRef.slickPrev();
-    };
     const settings = {
         infinite: true,
         slidesToShow: 5,
@@ -28,23 +20,15 @@ function FlashSale() {
                     <a href="/" className="flashsale-slider-title">
                         <img src="https://cdn0.fahasa.com/skin/frontend/ma_vanese/fahasa/images/flashsale/label-flashsale.svg?q=" />
                         <div className="margin_left_big">
-                            <span className="flashsale-page-countdown-label">
-                                Kết thúc trong
-                            </span>
+                            <span className="flashsale-page-countdown-label">Kết thúc trong</span>
                         </div>
                         <div className="flashsale-countdown margin_left_normal">
                             <span className="flashsale-countdown-temp"></span>
-                            <span className="flashsale-countdown-number">
-                                12
-                            </span>
+                            <span className="flashsale-countdown-number">12</span>
                             <span>:</span>
-                            <span className="flashsale-countdown-number">
-                                12
-                            </span>
+                            <span className="flashsale-countdown-number">12</span>
                             <span>:</span>
-                            <span className="flashsale-countdown-number">
-                                12
-                            </span>
+                            <span className="flashsale-countdown-number">12</span>
                         </div>
                     </a>
                 </div>
@@ -53,31 +37,18 @@ function FlashSale() {
                     style={{ position: "relative" }}
                     className="fs_hcenter_right flex-jus-text  padding_left_big"
                 >
-                    <span className="fhs_btn_default_text blue desktop_only">
-                        Xem tất cả
-                    </span>
-                    <span className="flex-jus-text">
-                        <RightIcon className="icon" />
-                    </span>
+                    <span className="fhs_btn_default_text blue desktop_only">Xem tất cả</span>
                 </a>
             </div>
             <div className="fhs-product-slider-content">
                 <div className="">
-                    <Slider
-                        ref={(slider) => {
-                            sliderRef = slider;
-                        }}
-                        {...settings}
-                    >
+                    <Slider {...settings}>
                         <div className="fhs_product_basic swiper-slide">
                             <div className="item-inner">
                                 <div className="ma-box-content">
                                     <div className="products clear">
                                         <div className="product images-container">
-                                            <a
-                                                href="/"
-                                                className="product-image"
-                                            >
+                                            <a href={"/product/"} className="product-image">
                                                 <div className="product-image">
                                                     <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8936146680467.jpg" />
                                                 </div>
@@ -86,24 +57,17 @@ function FlashSale() {
                                     </div>
                                     <div>
                                         <h2 className="product-name-no-ellipsis">
-                                            <a href="/">
-                                                Cờ Vua Nam Châm - Sato 046
-                                            </a>
+                                            <a href={"/product/"}>Cờ Vua Nam Châm - Sato 046</a>
                                         </h2>
                                         <div className="price-label">
                                             <p className="special-price">
                                                 <span className="price m-price-font ">
                                                     164.050 đ
                                                 </span>
-                                                <span className="discount-percent">
-                                                    -15%
-                                                </span>
+                                                <span className="discount-percent">-15%</span>
                                             </p>
                                             <p className="old-price">
-                                                <span className="price">
-                                                    {" "}
-                                                    193.000 đ
-                                                </span>
+                                                <span className="price"> 193.000 đ</span>
                                             </p>
                                         </div>
                                         <div className="fhs-rating-container">
@@ -122,10 +86,7 @@ function FlashSale() {
                                 <div className="ma-box-content">
                                     <div className="products clear">
                                         <div className="product images-container">
-                                            <a
-                                                href="/"
-                                                className="product-image"
-                                            >
+                                            <a href="/" className="product-image">
                                                 <div className="product-image">
                                                     <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8936146680467.jpg" />
                                                 </div>
@@ -134,24 +95,17 @@ function FlashSale() {
                                     </div>
                                     <div>
                                         <h2 className="product-name-no-ellipsis">
-                                            <a href="/">
-                                                Cờ Vua Nam Châm - Sato 046
-                                            </a>
+                                            <a href="/">Cờ Vua Nam Châm - Sato 046</a>
                                         </h2>
                                         <div className="price-label">
                                             <p className="special-price">
                                                 <span className="price m-price-font ">
                                                     164.050 đ
                                                 </span>
-                                                <span className="discount-percent">
-                                                    -15%
-                                                </span>
+                                                <span className="discount-percent">-15%</span>
                                             </p>
                                             <p className="old-price">
-                                                <span className="price">
-                                                    {" "}
-                                                    193.000 đ
-                                                </span>
+                                                <span className="price"> 193.000 đ</span>
                                             </p>
                                         </div>
                                         <div className="fhs-rating-container">
@@ -170,10 +124,7 @@ function FlashSale() {
                                 <div className="ma-box-content">
                                     <div className="products clear">
                                         <div className="product images-container">
-                                            <a
-                                                href="/"
-                                                className="product-image"
-                                            >
+                                            <a href="/" className="product-image">
                                                 <div className="product-image">
                                                     <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8936146680467.jpg" />
                                                 </div>
@@ -182,24 +133,17 @@ function FlashSale() {
                                     </div>
                                     <div>
                                         <h2 className="product-name-no-ellipsis">
-                                            <a href="/">
-                                                Cờ Vua Nam Châm - Sato 046
-                                            </a>
+                                            <a href="/">Cờ Vua Nam Châm - Sato 046</a>
                                         </h2>
                                         <div className="price-label">
                                             <p className="special-price">
                                                 <span className="price m-price-font ">
                                                     164.050 đ
                                                 </span>
-                                                <span className="discount-percent">
-                                                    -15%
-                                                </span>
+                                                <span className="discount-percent">-15%</span>
                                             </p>
                                             <p className="old-price">
-                                                <span className="price">
-                                                    {" "}
-                                                    193.000 đ
-                                                </span>
+                                                <span className="price"> 193.000 đ</span>
                                             </p>
                                         </div>
                                         <div className="fhs-rating-container">
@@ -218,10 +162,7 @@ function FlashSale() {
                                 <div className="ma-box-content">
                                     <div className="products clear">
                                         <div className="product images-container">
-                                            <a
-                                                href="/"
-                                                className="product-image"
-                                            >
+                                            <a href="/" className="product-image">
                                                 <div className="product-image">
                                                     <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8936146680467.jpg" />
                                                 </div>
@@ -230,24 +171,17 @@ function FlashSale() {
                                     </div>
                                     <div>
                                         <h2 className="product-name-no-ellipsis">
-                                            <a href="/">
-                                                Cờ Vua Nam Châm - Sato 046
-                                            </a>
+                                            <a href="/">Cờ Vua Nam Châm - Sato 046</a>
                                         </h2>
                                         <div className="price-label">
                                             <p className="special-price">
                                                 <span className="price m-price-font ">
                                                     164.050 đ
                                                 </span>
-                                                <span className="discount-percent">
-                                                    -15%
-                                                </span>
+                                                <span className="discount-percent">-15%</span>
                                             </p>
                                             <p className="old-price">
-                                                <span className="price">
-                                                    {" "}
-                                                    193.000 đ
-                                                </span>
+                                                <span className="price"> 193.000 đ</span>
                                             </p>
                                         </div>
                                         <div className="fhs-rating-container">
@@ -266,10 +200,7 @@ function FlashSale() {
                                 <div className="ma-box-content">
                                     <div className="products clear">
                                         <div className="product images-container">
-                                            <a
-                                                href="/"
-                                                className="product-image"
-                                            >
+                                            <a href="/" className="product-image">
                                                 <div className="product-image">
                                                     <img src="https://cdn0.fahasa.com/media/catalog/product/8/9/8936146680467.jpg" />
                                                 </div>
@@ -278,24 +209,17 @@ function FlashSale() {
                                     </div>
                                     <div>
                                         <h2 className="product-name-no-ellipsis">
-                                            <a href="/">
-                                                Cờ Vua Nam Châm - Sato 046
-                                            </a>
+                                            <a href="/">Cờ Vua Nam Châm - Sato 046</a>
                                         </h2>
                                         <div className="price-label">
                                             <p className="special-price">
                                                 <span className="price m-price-font ">
                                                     164.050 đ
                                                 </span>
-                                                <span className="discount-percent">
-                                                    -15%
-                                                </span>
+                                                <span className="discount-percent">-15%</span>
                                             </p>
                                             <p className="old-price">
-                                                <span className="price">
-                                                    {" "}
-                                                    193.000 đ
-                                                </span>
+                                                <span className="price"> 193.000 đ</span>
                                             </p>
                                         </div>
                                         <div className="fhs-rating-container">
@@ -310,12 +234,6 @@ function FlashSale() {
                             </div>
                         </div>
                     </Slider>
-                    <button className="button previous" onClick={previous}>
-                        <LeftIcon className="icon" />
-                    </button>
-                    <button className="button next" onClick={next}>
-                        <RightIcon className="icon" />
-                    </button>
                 </div>
             </div>
         </div>

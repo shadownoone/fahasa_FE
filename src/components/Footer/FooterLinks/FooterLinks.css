@@ -1,0 +1,16 @@
+.footer-help {
+    display: flex;
+
+    width: 100%;
+}
+.footer-help h3 {
+    margin-bottom: 10px;
+}
+
+.footer-help li {
+    padding: 12px 0;
+}
+.col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}

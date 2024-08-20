@@ -22,27 +22,27 @@
     display: block;
     border-radius: 5px;
 }
-.button {
-    border: none; /* Màu và độ dày của viền */
-    background-color: white; /* Màu nền */
+/* .button {
+    border: none;
+    background-color: white;
 
-    text-align: center; /* Căn giữa nội dung */
-    display: flex; /* Sử dụng flex để căn giữa biểu tượng */
+    text-align: center;
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* Chiều rộng của hình tròn */
-    height: 40px; /* Chiều cao của hình tròn */
-    border-radius: 50%; /* Tạo hình tròn */
-    margin: 10px 2px; /* Khoảng cách ngoài */
-    transition: background-color 0.4s, color 0.4s, border 0.4s; /* Thay đổi màu nền, màu chữ và viền khi hover */
-    cursor: pointer; /* Thay đổi con trỏ */
-}
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 10px 2px;
+    transition: background-color 0.4s, color 0.4s, border 0.4s;
+    cursor: pointer;
+} */
 
-.button:hover {
-    background-color: #007bff; /* Màu nền khi hover */
-    color: white; /* Màu chữ khi hover */
-    border: 2px solid #007bff; /* Đảm bảo viền khi hover */
-}
+/* .button:hover {
+    background-color: #007bff; 
+    color: white; 
+    border: 2px solid #007bff; 
+} */
 
 .previous {
     position: absolute; /* Vị trí tuyệt đối */
@@ -64,4 +64,15 @@
 .slick-prev:before,
 .slick-next:before {
     color: #5f4c4c;
+}
+.slick-prev {
+    left: -20px;
+}
+.slick-next {
+    right: -20px;
+}
+
+.slider-container .next,
+.slider-container .previous {
+    display: none !important;
 }

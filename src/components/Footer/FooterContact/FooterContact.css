@@ -1,0 +1,23 @@
+.footer-title {
+    width: 100%;
+    margin: 16px 0;
+}
+.footer-contact {
+    display: flex;
+
+    align-items: center;
+    width: 100%;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+.icon {
+    width: 18px;
+    margin-right: 10px;
+}
+.col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}

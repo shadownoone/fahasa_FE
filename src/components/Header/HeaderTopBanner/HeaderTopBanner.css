@@ -1,0 +1,17 @@
+.header-top-banner {
+    background-color: #e52323;
+}
+.top-banner-block {
+    text-align: center;
+    overflow: hidden;
+}
+
+.top-banner-block a {
+    display: block;
+    height: 100%;
+}
+
+.top-banner-block img {
+    max-height: 100%;
+    vertical-align: middle;
+}
